@@ -18,10 +18,28 @@ public class NameToHeight {
 	 * contain a specified name.
 	 */
 	public static void main(String[] args) {
+		System.out.println("Enter name to get height?");
 		Scanner in = new Scanner(System.in);
+		Map<String, Integer> map = new HashMap<String, Integer>();
+		map.put("Charles", 68);
+		map.put("Mimi", 67);
+		map.put("Eva", 66);
+		map.put("Hailey", 65);
 
-		// FIXME
-		throw new NotYetImplementedException();
+		String name = in.nextLine();
+		boolean b = false;
+
+		while (b == false) {
+			System.out.println(map.get(name));
+			System.out.println("Enter name to get height?");
+			name = in.nextLine();
+			if (name.equals("quit")) {
+				b = true;
+			}
+			
+		}
+
+
 
 	}
 }

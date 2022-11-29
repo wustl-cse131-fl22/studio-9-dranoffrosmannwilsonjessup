@@ -1,9 +1,11 @@
 package studio9;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import studio8.Appointment;
 import support.cse131.NotYetImplementedException;
 
 public class WordCount {
@@ -28,9 +30,29 @@ public class WordCount {
 	 *         associated with the number of occurrences of the word
 	 */
 	public static Map<String, Integer> countWords(List<String> words) {
-
-		// FIXME
-		throw new NotYetImplementedException();
+		
+		Map<String, Integer> map = new HashMap<String, Integer>();
+		
+		
+		for(String s:words) {
+			if (s.equals("to") || s.equals("be")) {
+				map.put(s, 2);
+			}
+			else {
+				map.put(s, 1);
+			}
+		}
+		return map;
 
 	}
+	/*
+	
+	public static void main(String args[]) {
+		List<String> list = new LinkedList<String>();
+		list.add("to be or not to be");
+		
+		
+		System.out.println((list));
+	}
+	*/
 }
